@@ -23,8 +23,8 @@ namespace Hotel_Reservation.Models
         public int plan_id { get; set; }
         public int company_id { get; set; }
         public DateTime is_created { get; set; }
-        public int rooms_min { get; set; }
-        public int rooms_max { get; set; }
+        public int room_min { get; set; }
+        public int room_max { get; set; }
     }
 
     public class UserAccount
@@ -37,7 +37,6 @@ namespace Hotel_Reservation.Models
         public string password { get; set; }
         public int company_id { get; set; }
         public DateTime is_created { get; set; }
-        public DateTime is_updated { get; set; }
     }
 
     public class City
@@ -54,6 +53,7 @@ namespace Hotel_Reservation.Models
         [Key]
         public int country_id { get; set; }
         public string country_name { get; set; }
+        public int country_code { get; set; }
     }
 
     public class Hotel
@@ -74,6 +74,7 @@ namespace Hotel_Reservation.Models
         public string room_name { get; set; }
         public string room_type { get; set; }
         public int current_price { get; set; }
+        public int hotel_id { get; set; }
     }
 
     public class Reservation
@@ -83,11 +84,10 @@ namespace Hotel_Reservation.Models
         public DateTime start_date { get; set; }
         public DateTime end_date { get; set; }
         public DateTime is_created { get; set; }
-        public DateTime is_updated { get; set; }
         public int discount_percent { get; set; }
         public int total { get; set; }
         public int guest_id { get; set; }
-        public string guest_name { get; set; }
+        public int room_id { get; set; }
     }
 
     public class ReservationStatus
