@@ -69,7 +69,7 @@ namespace Hotel_Reservation.Controllers
                 }
             }
 
-            return NoContent();
+            return CreatedAtAction("GetCity", new { id = city.city_id }, city);
         }
 
         // POST: api/Cities
